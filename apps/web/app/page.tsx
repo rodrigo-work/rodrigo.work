@@ -1,102 +1,65 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import Image from "next/image";
+import { socialLinks } from "./config";
 
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
+export default function Page() {
   return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <ThemeImage
-          className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
-          alt="Turborepo logo"
-          width={180}
-          height={38}
+    <section>
+      <a href={socialLinks.twitter} target="_blank">
+        <Image
+          src="/profile.png"
+          alt="Profile photo"
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+          unoptimized
+          width={160}
+          height={160}
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>apps/web/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
+      </a>
+      <h1 className="mb-8 text-2xl font-medium tracking-tight">
+        Portfolio template!
+      </h1>
+      <div className="prose prose-neutral dark:prose-invert">
+        <p>
+          A clean, fast, and lightweight portfolio template built with Next.js,
+          Vercel, and Tailwind CSS.
+        </p>
+        <p>
+          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
+          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
           <a
-            className={styles.primary}
-            href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
             target="_blank"
-            rel="noopener noreferrer"
+            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            more
           </a>
+          .
+        </p>
+        <p>
+          Nextfolio is{" "}
+          <a href={socialLinks.github} target="_blank">
+            open-source
+          </a>{" "}
+          and fully customizable, making it easy to add more features.
+        </p>
+        <p>
           <a
-            href="https://turbo.build/repo/docs?utm_source"
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
             target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
           >
-            Read our docs
+            Deploy
+          </a>{" "}
+          your Nextfolio site with Vercel in minutes and follow the set up
+          instructions in the{" "}
+          <a href="/blog/getting-started">Getting Started</a> post.
+        </p>
+        <p>
+          Built and maintained by{" "}
+          <a href="https://imsirius.xyz/" target="_blank">
+            Sirius
           </a>
-        </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
-        </Button>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://turbo.build?utm_source=create-turbo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turbo.build →
-        </a>
-      </footer>
-    </div>
+          .
+        </p>
+      </div>
+    </section>
   );
 }

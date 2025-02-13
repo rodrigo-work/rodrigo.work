@@ -1,8 +1,19 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "rodrigo.work",
+      "path": "../",
+    },
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto",
+      },
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+    },
+  },
 }
