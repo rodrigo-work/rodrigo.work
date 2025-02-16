@@ -28,9 +28,9 @@ export default function Page() {
           complexos de microsserviços.
         </p>
         <p>
-          <a href={socialLinks.github} target="_blank">
+          {/* <a href={socialLinks.github} target="_blank">
             open-source
-          </a>
+          </a> */}
           Sou um entusiasta de soluções de autenticação segura e monitoração de
           alta performance, com um histórico de desenvolvimento de APIs RESTful
           otimizadas para alto volume e projetos complexos, como marketplaces e

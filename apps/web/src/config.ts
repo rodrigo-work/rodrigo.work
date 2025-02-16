@@ -9,11 +9,11 @@ export const metaData = {
 };
 
 export const socialLinks = {
-  twitter: "https://x.com/1tssirius",
-  github: "https://github.com/1msirius/Nextfolio",
-  instagram: "https://www.instagram.com/",
-  linkedin: "https://www.linkedin.com/",
-  email: "mailto:example@gmail.com",
+  // twitter: "https://x.com/1tssirius",
+  github: "https://github.com/rodrigo-work/rodrigo.work",
+  // instagram: "https://www.instagram.com/",
+  linkedin: "https://www.linkedin.com/in/@rodrigo3d",
+  email: "mailto:me@rodrigo3d.com",
 };
 export interface Project {
   title: string;
@@ -23,7 +23,7 @@ export interface Project {
 }
 
 export const navItems = {
-  "/": { name: "Home" },
+  "/": { name: "" },
   // "/blog": { name: "Blog" },
   // "/projects": { name: "Projetos" },
   // "/photos": { name: "Photos" },
