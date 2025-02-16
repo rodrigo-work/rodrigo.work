@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { socialLinks } from "./config";
+import { socialLinks, metaData } from "@/config";
 
 export default function Page() {
   return (
     <section>
       <a href={socialLinks.twitter} target="_blank">
         <Image
-          src="/profile.png"
+          src={metaData.avatar ?? "/profile.png"}
           alt="Profile photo"
           className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
           unoptimized
@@ -16,10 +16,29 @@ export default function Page() {
         />
       </a>
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Portfolio template!
+        Node.js Senior Developer
       </h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
+          Com 10 anos de experiência em desenvolvimento, especializei-me em
+          Node.js, JavaScript e TypeScript, com foco em APIs escaláveis,
+          segurança avançada e monitoramento de microsserviços. Minha expertise
+          abrange uma vasta gama de tecnologias, incluindo AWS para
+          infraestrutura em nuvem e Docker/Kubernetes para gerenciar ambientes
+          complexos de microsserviços.
+        </p>
+        <p>
+          <a href={socialLinks.github} target="_blank">
+            open-source
+          </a>
+          Sou um entusiasta de soluções de autenticação segura e monitoração de
+          alta performance, com um histórico de desenvolvimento de APIs RESTful
+          otimizadas para alto volume e projetos complexos, como marketplaces e
+          e-commerces. Além disso, desenvolvo soluções personalizadas que
+          integram cache, escalabilidade e geolocalização, sempre visando a
+          melhor experiência do usuário e performance.
+        </p>
+        {/*  <p>
           A clean, fast, and lightweight portfolio template built with Next.js,
           Vercel, and Tailwind CSS.
         </p>
@@ -59,6 +78,7 @@ export default function Page() {
           </a>
           .
         </p>
+      */}
       </div>
     </section>
   );

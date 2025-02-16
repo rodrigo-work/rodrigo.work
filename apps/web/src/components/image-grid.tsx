@@ -22,7 +22,7 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
 
   return (
     <section>
-      <div className={`grid ${gridClass} gap-4 my-8`}>
+      <div className={`grid ${gridClass} gap-4 my-4`}>
         {images.map((image, index) => (
           <div key={index} className="relative aspect-square">
             {image.href ? (
