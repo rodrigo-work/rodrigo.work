@@ -23,6 +23,7 @@ export interface Project {
 }
 
 export const navItems = {
+  "/": { name: "Home" },
   // "/blog": { name: "Blog" },
   // "/projects": { name: "Projetos" },
   // "/photos": { name: "Photos" },
