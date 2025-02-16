@@ -4,7 +4,7 @@ import { socialLinks, metaData } from "@/config";
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
+      <a href={socialLinks.github} target="_blank">
         <Image
           src={metaData.avatar ?? "/profile.png"}
           alt="Profile photo"
